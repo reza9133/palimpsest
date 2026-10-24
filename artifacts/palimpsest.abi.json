@@ -1,0 +1,217 @@
+{
+  "ctor": {
+    "params": [
+      [
+        "stake_wei",
+        "int"
+      ],
+      [
+        "challenge_bond_wei",
+        "int"
+      ],
+      [
+        "reveal_window",
+        "int"
+      ],
+      [
+        "challenge_window",
+        "int"
+      ],
+      [
+        "judge_window",
+        "int"
+      ],
+      [
+        "overlap_percent",
+        "int"
+      ]
+    ],
+    "kwparams": {}
+  },
+  "methods": {
+    "challenge_claim": {
+      "params": [
+        [
+          "junior_seq",
+          "int"
+        ],
+        [
+          "senior_seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "commit_claim": {
+      "params": [
+        [
+          "commitment_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "deposit_credit": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": true
+    },
+    "expire_challenge": {
+      "params": [
+        [
+          "junior_seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "find_claim": {
+      "params": [
+        [
+          "author_text",
+          "string"
+        ],
+        [
+          "commitment_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "forfeit_unrevealed": {
+      "params": [
+        [
+          "seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_accounting": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_available_credit": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_challenge": {
+      "params": [
+        [
+          "junior_seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_claim": {
+      "params": [
+        [
+          "seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_claim_count": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_info": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "judge_challenge": {
+      "params": [
+        [
+          "junior_seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "reveal_claim": {
+      "params": [
+        [
+          "seq",
+          "int"
+        ],
+        [
+          "title_text",
+          "string"
+        ],
+        [
+          "abstract_text",
+          "string"
+        ],
+        [
+          "elements_text",
+          "string"
+        ],
+        [
+          "salt_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "settle_claim": {
+      "params": [
+        [
+          "seq",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "withdraw_credit": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}
